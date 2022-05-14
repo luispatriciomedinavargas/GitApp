@@ -9,7 +9,7 @@ export const AddMovie = ({setCategories: setMovie}) => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(inputValue.trim().length> 2){
-            setMovie( movies=>[...movies, inputValue]);
+            setMovie( movies=>[inputValue,...movies,]);
             setInputValue('')
         }
     }

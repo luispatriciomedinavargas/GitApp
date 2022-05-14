@@ -3,12 +3,11 @@ import { AddMovie } from './components/AddMovies';
 import { MovieGrid } from './components/MovieGrid';
 
 export const GifExpertApp = () => {
-    const [search, setSearch] = useState(['One Punch']);
+    const [search, setSearch] = useState(['Stars Wars']);
 
 
     return (
         <div>
-          
          <h2>GifExpertApp</h2>
          <AddMovie setCategories={setSearch}/>
          <hr/>
@@ -17,7 +16,7 @@ export const GifExpertApp = () => {
             search.map((movie) => 
             <MovieGrid 
               key={movie}
-            movie={movie}/>
+            search={movie}/>
             )
         }
         </ol>
