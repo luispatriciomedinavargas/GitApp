@@ -29,14 +29,12 @@ export const MovieGrid = () => {
     ))
   }
   return (
-    <div className="card h-100">
-      <div className="card-body">
+    <div className='card-grid'>
         {
             Object.keys(movies).map((item,i)=>(
               <MovieGridItem movie={movies[item]} key={i}/>
             ))
         }
       </div>
-    </div>
   )
 }
