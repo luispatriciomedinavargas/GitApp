@@ -10,12 +10,6 @@ export const MovieGrid = ({search}) => {
     getGifs(search)
     .then(movie=>{setMovies(movie)})
   },[])
-
-  {
-    Object.keys(movies).map((item,i)=>(
-      <div key={i}>{movies[item].rating}</div>
-    ))
-  }
   return (
     <div className='card-grid'>
         {
