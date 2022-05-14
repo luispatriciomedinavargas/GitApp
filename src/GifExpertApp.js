@@ -8,10 +8,11 @@ export const GifExpertApp = () => {
 
     return (
         <div>
-         <h2>GifExpertApp</h2>
+       <div>
+       <h2>GifExpertApp</h2>
          <AddMovie setCategories={setSearch}/>
          <hr/>
-        <ol>
+       </div>
           { 
             search.map((movie) => 
             <MovieGrid 
@@ -19,7 +20,6 @@ export const GifExpertApp = () => {
             search={movie}/>
             )
         }
-        </ol>
     </div>
   )
 }
