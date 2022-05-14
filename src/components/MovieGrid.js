@@ -1,28 +1,21 @@
 import React, { Fragment } from 'react'
 import { useFetchMovies } from '../hooks/useFetchMovie';
-// import { getGifs } from '../helpers/getMovies';
 import { MovieGridItem } from './MovieGridItem';
 
 export const MovieGrid = ({search}) => {
     
-  // const [movies, setMovies] = useState([]);
 
-  const { loading} = useFetchMovies();
-  // useEffect(()=>{
-  //   getGifs(search)
-  //   .then(movie=>{setMovies(movie)})
-  // },[])
+  const {data,loading} = useFetchMovies(search);
   return (
       <Fragment>
-    {loading ? 'Search...' : 'all right!'}
-    
-      {/* // <div className='card-grid'>
-      //     
-    //         Object.keys(movies).map((item,i)=>(
-    //           <MovieGridItem movie={movies[item]} key={i}/>
-    //         ))
-    //     }
-    //   </div> */}
+        {loading && <p>Loading....</p>}
+     <div className='card-grid'>         
+         {
+             Object.keys(data).map((item,i)=>(
+               <MovieGridItem movie={data[item]} key={i}/>
+             ))
+         }
+       </div>
     </Fragment>
   )
 }

@@ -1,4 +1,4 @@
-export const getGifs=async(search)=>{
+export const getMovies = async(search)=>{
     const url=`http://api.tvmaze.com/search/shows?q=${encodeURI(search)}`
   const reps = await fetch(url);
   const data = await reps.json();
