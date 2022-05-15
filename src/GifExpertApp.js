@@ -3,7 +3,7 @@ import { AddMovie } from './components/AddMovies';
 import { MovieGrid } from './components/MovieGrid';
 
 export const GifExpertApp = () => {
-    const [search, setSearch] = useState(['Stars Wars']);
+    const [search, setSearch] = useState(['goku']);
 
 
     return (
